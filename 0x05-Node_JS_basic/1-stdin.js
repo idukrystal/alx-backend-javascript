@@ -7,7 +7,7 @@ const myInterface  = readline.createInterface({
   output: process.stdout
 })
 
-myInterface.question("Your name is: ", (answer) => {
+myInterface.question("Your name is: ", (answe) => {
   process.exit()
 })
 
