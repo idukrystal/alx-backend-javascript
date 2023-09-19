@@ -1,6 +1,0 @@
-function displayMessage(msg) {
-  console.log(msg);
-}
-
-displayMessage("yes")
-module.export = displayMessage

@@ -1,16 +1,16 @@
-const readline = require('readline')
+const readline = require('readline');
 
-console.log("Welcome to Holberton School, what is your name?")
+console.log('Welcome to Holberton School, what is your name?');
 
-const myInterface  = readline.createInterface({
+const myInterface = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
-})
+  output: process.stdout,
+});
 
-myInterface.question("Your name is: ", (answe) => {
-  process.exit()
-})
+myInterface.question('Your name is: ', () => {
+  process.exit();
+});
 
-process.on("exit", () => {
-  console.log("This important software is now closing");
-})
+process.on('exit', () => {
+  console.log('This important software is now closing');
+});
