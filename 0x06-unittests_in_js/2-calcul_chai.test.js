@@ -1,6 +1,6 @@
 expect = require('chai').expect;
 
-calculateNumber = require('./1-calcul');
+calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber', () => {
   describe('type - SUM', () => {
