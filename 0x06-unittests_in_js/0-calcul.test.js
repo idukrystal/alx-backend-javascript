@@ -1,22 +1,22 @@
-assert = require('assert');
+const assert = require('assert');
 
-calculateNumber = require('./0-calcul');
+const calculateNumber = require('./0-calcul');
 
 describe('calculateNumber', () => {
   it(
     "returns correct result",
-    () => assert.strictEqual(calculateNumber(1, 3), 4)
+    () => assert.equal(calculateNumber(1, 3), 4)
   );
   it(
     "returns correct result",
-    () => assert.strictEqual(calculateNumber(1, 3.7), 5)
+    () => assert.equal(calculateNumber(1, 3.7), 5)
   );
   it(
     "returns correct result",
-    () => assert.strictEqual(calculateNumber(1.2, 3.7), 5)
+    () => assert.equal(calculateNumber(1.2, 3.7), 5)
   );
   it(
     "returns correct result",
-    () => assert.strictEqual(calculateNumber(1.5, 3.7), 6)
+    () => assert.equal(calculateNumber(1.5, 3.7), 6)
   );
 });
