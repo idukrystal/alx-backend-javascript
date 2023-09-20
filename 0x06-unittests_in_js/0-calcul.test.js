@@ -5,6 +5,18 @@ calculateNumber = require('./0-calcul');
 describe('calculateNumber', () => {
   it(
     "returns correct result",
-    () => assert.equal(calculateNumber(5.2, 3.6), 9)
-  )
+    () => assert.equal(calculateNumber(1, 3), 4)
+  );
+  it(
+    "returns correct result",
+    () => assert.equal(calculateNumber(1, 3.7), 5)
+  );
+  it(
+    "returns correct result",
+    () => assert.equal(calculateNumber(1.2, 3.7), 5)
+  );
+  it(
+    "returns correct result",
+    () => assert.equal(calculateNumber(1.5, 3.7), 6)
+  );
 });

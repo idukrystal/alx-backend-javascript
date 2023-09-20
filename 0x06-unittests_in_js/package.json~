@@ -1,9 +1,0 @@
-{
-  "type": "module",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha"
-  },
-  "dependencies": {
-    "mocha": "latest"
-  }
-}

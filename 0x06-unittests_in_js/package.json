@@ -1,8 +1,16 @@
 {
-  "scripts": {
-    "test": "./node_modules/.bin/mocha"
+  "name": "0x06-unittests_in_js",
+  "description": "alx ptoject on unittesting in javascript",
+  "version": "1.0.0",
+  "main": "0-calcul.js",
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "latest",
+    "sinon": "latest"
   },
-  "dependencies": {
-    "mocha": "latest"
-  }
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "crysart",
+  "license": "ISC"
 }
