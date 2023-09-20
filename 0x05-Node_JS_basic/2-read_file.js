@@ -35,7 +35,7 @@ function countStudents(dbPath) {
       (content) => {
         const n = content.name;
         const l = content.list;
-        const msg = `Number of students in ${n}: ${l.length}. List: ${l}`;
+        const msg = `Number of students in ${n}: ${l.length}. List: ${l.join(', ')}`;
         console.log(msg);
       },
     );
