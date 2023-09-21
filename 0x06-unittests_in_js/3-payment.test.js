@@ -7,15 +7,10 @@ const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
 
 describe('sendPaymentRequestToApi', () => {
-  const sandbox = sinon.createSandbox();
-  beforeEach(() => {
-    sandbox.spy(Utils, 'calculateNumber');
-  });
-  afterEach(() => {
-    sandbox.restore();
-  });
   it('should use Utill.calculateNumber', () => {
+    const spy = sinon.spy(Utils, 'calculateNumber');
     sendPaymentRequestToApi(100, 20);
-    assert(Utils.calculateNumber.calledOnce);
+    assert(spy.calledOnce);
+    spy.restore();
   });
 });
