@@ -15,7 +15,7 @@ describe('sendPaymentRequestToApi', () => {
     sandbox.restore();
   });
   it('should use Utill.calculateNumber', () => {
-    sendPaymentRequestToApi(800, 1200);
+    sendPaymentRequestToApi(100, 20);
     assert(Utils.calculateNumber.calledOnce);
   });
 });
