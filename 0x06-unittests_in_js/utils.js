@@ -3,9 +3,9 @@ class Utils {
     const ar = Math.round(a);
     const br = Math.round(b);
     switch(type) {
-    case "SUM": return ar + br;
-    case "SUBTRACT": return ar - br;
-    case "DIVIDE":
+    case 'SUM': return ar + br;
+    case 'SUBTRACT': return ar - br;
+    case 'DIVIDE':
       if (br == 0) return 'Error';
       return ar / br;
     }
