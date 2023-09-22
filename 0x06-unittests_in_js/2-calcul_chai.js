@@ -1,13 +1,14 @@
-function calculateNumber(type, a, b) {
-  const ar = Math.round(a);
-  const br = Math.round(b);
-  switch(type) {
-  case "SUM": return ar + br;
-  case "SUBTRACT": return ar - br;
-  case "DIVIDE":
-    if (br == 0) return 'Error';
-    return ar / br;
+const calculateNumber = (type, a, b) => {
+  if (type === 'SUM') {
+    return Math.round(a) + Math.round(b);
   }
-}
+  if (type === 'SUBTRACT') {
+    return Math.round(a) - Math.round(b);
+  }
+  if (type === 'DIVIDE') {
+    return Math.round(b) === 0 ? 'Error' : Math.round(a) / Math.round(b);
+  }
+  return 0;
+};
 
 module.exports = calculateNumber;

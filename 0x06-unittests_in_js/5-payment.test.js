@@ -1,24 +1,29 @@
 const sinon = require('sinon');
-
-const assert = require('assert');
-
+const { expect } = require('chai');
 const sendPaymentRequestToApi = require('./5-payment');
 
-const Utils = require('./utils');
-
 describe('sendPaymentRequestToApi', () => {
-  beforeEach(() =>  {
-    sinon.spy(console, 'log');
+  let bigBrother;
+
+  beforeEach(() => {
+    if (!bigBrother) {
+      bigBrother = sinon.spy(console);
+    }
   });
+
   afterEach(() => {
-    console.log.restore();
-  })
-  it('is tested with 100 120', () => {
-    sendPaymentRequestToApi(100, 20);
-    assert(console.log.withArgs('The total is: 120').calledOnce);
+    bigBrother.log.resetHistory();
   });
-  it('is tested with 10 10', () => {
+
+  it('sendPaymentRequestToApi(100, 20) logs "The total is: 120" to the console', () => {
+    sendPaymentRequestToApi(100, 20);
+    expect(bigBrother.log.calledWith('The total is: 120')).to.be.true;
+    expect(bigBrother.log.calledOnce).to.be.true;
+  });
+
+  it('sendPaymentRequestToApi(10, 10) logs "The total is: 20" to the console', () => {
     sendPaymentRequestToApi(10, 10);
-    assert(console.log.withArgs('The total is: 20').calledOnce);
+    expect(bigBrother.log.calledWith('The total is: 20')).to.be.true;
+    expect(bigBrother.log.calledOnce).to.be.true;
   });
 });
